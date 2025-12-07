@@ -1,13 +1,13 @@
 // import { useState } from 'react'
 import './App.css'
-import Button from './components/Button'
+// import Button from './components/Button'
+import Home from './pages/Home'
 
 function App() {
 
   return (
     <>
-      <Button variant='secondary'>Envoyer</Button>
-      <h1 className="text-5xl font-bold text-blue-600">Hello Tailwind 4</h1>
+      <Home />
 
     </>
   )
