@@ -15,10 +15,10 @@ function App() {
         {/* Page de connexion */}
         <Route path="/login" element={<LoginPage />} />
         
-        {/* Page d'inscription (à créer) */}
+        {/* Page d'inscription */}
         <Route path="/signup" element={<SignupPage />} />
         
-        {/* Redirection par défaut - Page 404 */}
+        {/* Page 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
