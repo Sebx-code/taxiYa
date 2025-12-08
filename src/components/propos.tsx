@@ -1,5 +1,6 @@
 // import React, { useState } from 'react';
 import { Award, Users, Car, ThumbsUp } from "lucide-react";
+import TaxiYaLogo from "../assets/taxi";
 
 // Composant À propos
 export function Propos() {
@@ -45,7 +46,7 @@ export function Propos() {
           <div className="relative">
             <div className="bg-linear-to-br from-amber-400 to-amber-500 rounded-3xl p-8 shadow-2xl">
               <div className="bg-white rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
-                <Car className="w-48 h-48 text-amber-500" />
+                <TaxiYaLogo w="800" h="200" />
               </div>
             </div>
             {/* Decorative elements */}

@@ -8,6 +8,7 @@ import Forfaits from "../components/forfait";
 import { Propos } from "../components/propos";
 import { Contact } from "../components/contact";
 import { Link } from "react-router-dom";
+import TaxiYaLogo from "../assets/taxi";
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
           <Nav
-            logo={<h2 className="text-2xl font-bold text-blue-600">TaxiYa</h2>}
+            logo={<TaxiYaLogo w="200" h="40" />}
             items={[
               { label: "Accueil", href: "#hero" },
               { label: "Services", href: "#services" },

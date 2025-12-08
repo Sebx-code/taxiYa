@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import LoginPage from './pages/login';
 import './App.css';
+import SignupPage from './pages/signup';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         
         {/* Page d'inscription (à créer) */}
-        <Route path="/signup" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
         
         {/* Redirection par défaut - Page 404 */}
         <Route path="*" element={<NotFound />} />
