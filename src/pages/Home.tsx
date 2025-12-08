@@ -7,6 +7,7 @@ import Services from "../components/services";
 import Forfaits from "../components/forfait";
 import { Propos } from "../components/propos";
 import { Contact } from "../components/contact";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -30,12 +31,16 @@ function Home() {
             sticky={true}
             rightContent={
               <>
-                <Button variant="outline" size="sm">
-                  Connexion
-                </Button>
-                <Button size="sm" className="bg-amber-300">
-                  S'inscrire
-                </Button>
+                <Link to="/login">
+                  <Button variant="outline" size="sm">
+                    Connexion
+                  </Button>
+                </Link>
+                <Link to="/signup">
+                  <Button size="sm" className="bg-amber-300">
+                    S'inscrire
+                  </Button>
+                </Link>
               </>
             }
           />
@@ -45,22 +50,30 @@ function Home() {
               Taxi ?
             </h2>
             <span className="mt-auto self-end">
-              <button className="px-6 py-3 bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                Réservez maintenant
-              </button>
+              <Link to="/login">
+                <button className="px-6 py-3 bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  Réservez maintenant
+                </button>
+              </Link>
             </span>
           </div>
           <div className="absolute bottom-20">
             <div className="flex gap-5">
-              <Button variant="primary" rounded="full">
-                Nos services
-              </Button>
-              <Button variant="outline1" rounded="full">
-                À propos
-              </Button>
-              <Button variant="perso1" rounded="full">
-                S'inscrire
-              </Button>
+              <Link to="#services">
+                <Button variant="primary" rounded="full">
+                  Nos services
+                </Button>
+              </Link>
+              <Link to="#about">
+                <Button variant="outline1" rounded="full">
+                  À propos
+                </Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="perso1" rounded="full">
+                  S'inscrire
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

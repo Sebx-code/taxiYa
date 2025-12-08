@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff, Mail, Lock, ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,10 +30,13 @@ export default function LoginPage() {
               </div>
               <h1 className="text-2xl font-bold">TaxiYa</h1>
             </div>
-            <button className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors">
+            <Link
+              to="/"
+              className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors"
+            >
               <ArrowLeft className="w-5 h-5" />
               <span className="text-sm">Retour au site</span>
-            </button>
+            </Link>
           </div>
 
           {/* Main Message */}
@@ -223,9 +227,12 @@ export default function LoginPage() {
             {/* Sign Up Link */}
             <p className="text-center text-slate-600">
               Pas encore de compte ?{" "}
-              <button className="text-amber-600 hover:text-amber-700 font-semibold transition-colors">
+              <Link
+                to="/signup"
+                className="text-amber-600 hover:text-amber-700 font-semibold transition-colors"
+              >
                 Inscrivez-vous ici
-              </button>
+              </Link>
             </p>
           </div>
         </div>
