@@ -10,6 +10,7 @@ import {
   Linkedin,
   Send,
 } from "lucide-react";
+import MapView from "./map";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -167,19 +168,33 @@ export function Contact() {
           </div>
 
           {/* Map Placeholder */}
-          <div className="bg-linear-to-br from-slate-100 to-slate-200 rounded-2xl shadow-xl overflow-hidden">
-            <div className="w-full h-full min-h-[500px] flex items-center justify-center p-8">
-              <div className="text-center">
-                <MapPin className="w-24 h-24 text-slate-400 mx-auto mb-4" />
-                <p className="text-slate-600 text-lg font-medium">
-                  Carte interactive
-                </p>
-                <p className="text-slate-500 mt-2">
-                  Rond-point Express, Yaoundé
-                </p>
-              </div>
-            </div>
-          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+  {/* Overlay décoratif */}
+  <div className="absolute top-0 left-0 right-0 z-10 bg-linear-to-b from-slate-900/80 to-transparent p-6">
+    <div className="flex items-center gap-3">
+      <div className="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center">
+        <MapPin className="w-6 h-6 text-slate-900" />
+      </div>
+      <div className="text-white">
+        <p className="font-bold text-lg">Notre Localisation</p>
+        <p className="text-sm text-slate-200">Rond-point Express, Yaoundé</p>
+      </div>
+    </div>
+  </div>
+  
+  {/* Carte */}
+  <div className="relative">
+    <MapView />
+  </div>
+  
+  {/* Badge en bas */}
+  <div className="absolute bottom-6 right-6 z-10 bg-white px-6 py-3 rounded-full shadow-xl border border-slate-200">
+    <p className="text-sm font-semibold text-slate-900 flex items-center gap-2">
+      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+      Disponible 24/7
+    </p>
+  </div>
+</div>
         </div>
       </div>
 

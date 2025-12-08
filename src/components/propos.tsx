@@ -1,6 +1,5 @@
-
 // import React, { useState } from 'react';
-import {Award, Users, Car, ThumbsUp } from 'lucide-react';
+import { Award, Users, Car, ThumbsUp } from "lucide-react";
 
 // Composant À propos
 export function Propos() {
@@ -8,23 +7,23 @@ export function Propos() {
     {
       icon: <Users className="w-8 h-8" />,
       number: "5000+",
-      label: "Clients satisfaits"
+      label: "Clients satisfaits",
     },
     {
       icon: <Car className="w-8 h-8" />,
       number: "50+",
-      label: "Véhicules disponibles"
+      label: "Véhicules disponibles",
     },
     {
       icon: <Award className="w-8 h-8" />,
       number: "10 ans",
-      label: "D'expérience"
+      label: "D'expérience",
     },
     {
       icon: <ThumbsUp className="w-8 h-8" />,
       number: "98%",
-      label: "Taux de satisfaction"
-    }
+      label: "Taux de satisfaction",
+    },
   ];
 
   return (
@@ -61,25 +60,40 @@ export function Propos() {
             </h3>
             <div className="space-y-4 text-slate-700 leading-relaxed">
               <p>
-                Fondée en 2015, <strong>TaxiYa</strong> est devenue la référence en matière de transport urbain à Yaoundé. Notre mission est simple : offrir un service de qualité, fiable et accessible à tous.
+                Fondée en 2015, <strong>TaxiYa</strong> est devenue la référence
+                en matière de transport urbain à Yaoundé. Notre mission est
+                simple : offrir un service de qualité, fiable et accessible à
+                tous.
               </p>
               <p>
-                Avec une flotte de plus de 50 véhicules modernes et une équipe de chauffeurs professionnels certifiés, nous nous engageons à rendre chaque trajet confortable et sécurisé.
+                Avec une flotte de plus de 50 véhicules modernes et une équipe
+                de chauffeurs professionnels certifiés, nous nous engageons à
+                rendre chaque trajet confortable et sécurisé.
               </p>
               <p>
-                Que ce soit pour un déplacement professionnel, un transfert aéroport ou une sortie en famille, nous mettons tout en œuvre pour garantir votre satisfaction.
+                Que ce soit pour un déplacement professionnel, un transfert
+                aéroport ou une sortie en famille, nous mettons tout en œuvre
+                pour garantir votre satisfaction.
               </p>
             </div>
 
             {/* Values */}
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="bg-blue-50 p-4 rounded-xl border border-blue-200">
-                <h4 className="font-bold text-slate-900 mb-2">🎯 Notre Vision</h4>
-                <p className="text-sm text-slate-700">Devenir le leader du transport urbain en Afrique Centrale</p>
+                <h4 className="font-bold text-slate-900 mb-2">
+                  🎯 Notre Vision
+                </h4>
+                <p className="text-sm text-slate-700">
+                  Devenir le leader du transport urbain en Afrique Centrale
+                </p>
               </div>
               <div className="bg-amber-50 p-4 rounded-xl border border-amber-200">
-                <h4 className="font-bold text-slate-900 mb-2">💎 Nos Valeurs</h4>
-                <p className="text-sm text-slate-700">Fiabilité, sécurité, ponctualité et excellence</p>
+                <h4 className="font-bold text-slate-900 mb-2">
+                  💎 Nos Valeurs
+                </h4>
+                <p className="text-sm text-slate-700">
+                  Fiabilité, sécurité, ponctualité et excellence
+                </p>
               </div>
             </div>
           </div>
@@ -98,9 +112,7 @@ export function Propos() {
               <div className="text-3xl font-bold text-slate-900 mb-2">
                 {stat.number}
               </div>
-              <div className="text-slate-600">
-                {stat.label}
-              </div>
+              <div className="text-slate-600">{stat.label}</div>
             </div>
           ))}
         </div>
