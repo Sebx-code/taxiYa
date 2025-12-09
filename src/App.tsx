@@ -2,8 +2,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import LoginPage from './pages/login';
-import './App.css';
 import SignupPage from './pages/signup';
+import AdminPage from './pages/admin';
+import DriverHomePage from './pages/driverHome';
+import UserHomePage from './pages/userHome';
+import './App.css';
 
 function App() {
   return (
@@ -17,6 +20,15 @@ function App() {
         
         {/* Page d'inscription */}
         <Route path="/signup" element={<SignupPage />} />
+        
+        {/* Page admin */}
+        <Route path="/admin" element={<AdminPage />} />
+        
+        {/* Page accueil conducteur */}
+        <Route path="/driver" element={<DriverHomePage />} />
+        
+        {/* Page accueil utilisateur */}
+        <Route path="/user" element={<UserHomePage />} />
         
         {/* Page 404 */}
         <Route path="*" element={<NotFound />} />

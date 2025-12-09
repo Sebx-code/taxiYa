@@ -18,8 +18,6 @@ import {
   AlertCircle,
   XCircle,
   Volume2,
-  VolumeX,
-  MapPinned,
   Users,
 } from "lucide-react";
 
@@ -237,7 +235,7 @@ export default function DriverDashboard() {
               </div>
               {isOnline && (
                 <div className="flex items-center gap-2 bg-white bg-opacity-20 px-4 py-2 rounded-lg">
-                  <MapPinned className="w-5 h-5" />
+                  <MapPin className="w-5 h-5" />
                   <span className="font-medium">Position activée</span>
                 </div>
               )}
